@@ -10,44 +10,46 @@
 </ion-header>
 
 <ion-content color="light">
-  
+
   <ion-row>
-    <ion-col>
+    <ion-col size="6">
       <ion-card class="temp-card" color="light" href="/info">
         <img src="assets/therm.jpg" alt=""/>
-          <ion-card-header>
-              <div class="ion-text-center">
-                  <ion-card-title class="ion-text-center">Temperature</ion-card-title>
-                </div>
-          </ion-card-header>
+        <ion-card-header>
+          <div class="ion-text-center">
+            <ion-card-title class="ion-text-center">Temperature</ion-card-title>
+          </div>
+        </ion-card-header>
       </ion-card>
     </ion-col>
-    <ion-col>
+    <ion-col size="6">
       <ion-card class="humid-card" color="light" href="/info">
-        <img src="assets/humid.png" alt="" height="236px"/>
-          <ion-card-header>
-            <div class="ion-text-center">
-              <ion-card-title class="ion-text-center">Humidity</ion-card-title>
-            </div>
-          </ion-card-header>
-        </ion-card>
+        <!-- <img src="assets/humid.png" alt="" height="236px" /> -->
+        <img src="assets/humid.png" alt="" />
+        <ion-card-header>
+          <div class="ion-text-center">
+            <ion-card-title class="ion-text-center">Humidity</ion-card-title>
+          </div>
+        </ion-card-header>
+      </ion-card>
     </ion-col>
   </ion-row>
 
-  <ion-grid >
-    <ion-row justify-content-center align-items-center> 
+  <!-- <ion-grid> -->
+  <ion-row justify-content-center align-items-center>
+    <ion-col size="6">
       <ion-card class="soil-card" color="light" href="/info">
-        <img src="assets/soil.png" alt="" height="236px"/>
-          <ion-card-header>
-            <div class="ion-text-center">
-              <ion-card-title class="ion-text-center">Moisture</ion-card-title>
-            </div>
-          </ion-card-header>
+        <!-- <img src="assets/soil.png" alt="" height="236px" /> -->
+        <img src="assets/soil.png" alt="" />
+        <ion-card-header>
+          <div class="ion-text-center">
+            <ion-card-title class="ion-text-center">Moisture</ion-card-title>
+          </div>
+        </ion-card-header>
       </ion-card>
-    </ion-row>
-  </ion-grid>
-
-    <ion-card class="report-card" color="light" href="/report">
+    </ion-col>
+    <ion-col size="6">
+      <ion-card class="report-card" color="light" href="/report">
         <img src="/assets/report.jpg" alt=""/>
         <ion-card-header>
           <div class="ion-text-center">
@@ -55,16 +57,20 @@
           </div>
         </ion-card-header>
       </ion-card>
+    </ion-col>
 
-      <!-- <ion-button expand="full" fill="outline">
+  </ion-row>
+  <!-- </ion-grid> -->
+
+  <!-- <ion-button expand="full" fill="outline">
         <img src="/assets/soil.png" alt=""/>
       </ion-button> -->
 
-    <!-- <ion-card >
+  <!-- <ion-card >
         <button ion-item>
         </button>
     </ion-card> -->
-    <!-- <ion-list lines="none">
+  <!-- <ion-list lines="none">
       <ion-list-header>
         <ion-label>Resources</ion-label>
       </ion-list-header>
