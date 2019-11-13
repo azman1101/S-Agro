@@ -3,17 +3,37 @@
   overflow: hidden;
 }
 
-ion-card.temp-card{
-  width: 354px;
-  height: 290px;
+// ion-card.temp-card{
+//   width: 354px;
+//   height: 290px;
+// }
+
+// ion-card.humid-card{
+//   width: 354px;
+//   height: 290px;
+// }
+
+// ion-card.soil-card{
+//   width: 354px;
+//   height: 290px;
+// }
+
+ion-card{
+  // width: 50vw;
+  height: 30vh;
 }
 
-ion-card.humid-card{
-  width: 354px;
-  height: 290px;
+ion-col{
+  padding: 18px 0px 0px;
 }
 
-ion-card.soil-card{
-  width: 354px;
-  height: 290px;
+ion-card-header{
+  padding: 0;
+  margin: 10px;
+}
+
+img{
+  height: 22vh;
+  width: 100%;
+  object-fit: cover;
 }
