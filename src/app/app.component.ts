@@ -28,6 +28,11 @@ export class AppComponent {
       title: 'Report',
       url: '/report',
       icon: 'md-copy'
+    },
+    {
+      title: 'Prediction',
+      url: '/prediction',
+      icon: 'ios-analytics'
     }
   ];
 

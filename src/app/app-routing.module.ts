@@ -17,6 +17,9 @@ const routes: Routes = [
   { path: 'report', 
     loadChildren: './report/report.module#ReportPageModule' 
   },
+  { path: 'prediction', 
+    loadChildren: './prediction/prediction.module#PredictionPageModule' 
+  },
   { path: 'developers', loadChildren: './pages/developers/developers.module#DevelopersPageModule' },
   { path: 'developer', loadChildren: './pages/developer/developer.module#DeveloperPageModule' },
   // {
