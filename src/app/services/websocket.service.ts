@@ -8,6 +8,7 @@ export class WebsocketService {
   private humidity:any;
   private moisture:any;
   private temp:any;
+  private ph:any;
   constructor() { 
   }
 
@@ -33,6 +34,7 @@ export class WebsocketService {
               scope.sethumidity(wsData.body.data.humidity);
               scope.setmoisture(wsData.body.data.soilmoisture);
               scope.setTemp(wsData.body.data.temperature);
+              scope.setPh(wsData.body.data.ph);
             }
           }
      };
@@ -76,5 +78,13 @@ export class WebsocketService {
 
   getTemp(){
     return this.temp;
+  }
+
+  setPh(ph){
+    this.ph = ph;
+  }
+
+  getPh(){
+    return this.ph;
   }
 }

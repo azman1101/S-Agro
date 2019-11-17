@@ -13,13 +13,16 @@ export class InfoPage implements OnInit {
   temperature;
   moisture;
   hummidity;
+  ph;
   historyhumidity;
   historymoisture;
   historytemperature;
+  historyph;
   constructor(private toastController: ToastController, private ws:WebsocketService) { 
     this.historyhumidity = [];
     this.historymoisture = [];
     this.historytemperature = [];
+    this.historyph = [];
   }
 
   getTemp(){
@@ -34,9 +37,14 @@ export class InfoPage implements OnInit {
     return this.ws.getmoisture();
   }
 
+  getPh(){
+    return this.ws.getPh();
+  }
+
   ngOnInit() {
     this.temperature = 7;
     // this.moisture = 7;
+    this.ph = 7;
     this.addToHistory();
   }
 
@@ -46,6 +54,7 @@ export class InfoPage implements OnInit {
       let temperature = scope.ws.getTemp();
       let humidity = scope.ws.gethumidity();
       let moisture = scope.ws.getmoisture();
+      let ph = scope.ws.getPh();
       if(temperature){
         let date = new Date();
         let time = (date.getDate() < 10 ? "0" + date.getDate() : date.getDate())  
@@ -58,6 +67,7 @@ export class InfoPage implements OnInit {
           level: temperature,
           level1: humidity,
           level2: moisture,
+          level3: ph,
         }
         scope.historytemperature.push(data);
       }
